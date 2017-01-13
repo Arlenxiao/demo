@@ -31,6 +31,10 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.lbl_page = new System.Windows.Forms.Label();
+            this.lbl_msg = new System.Windows.Forms.Label();
+            this.btn_next = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.chk_num = new System.Windows.Forms.CheckBox();
             this.btn_stop = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -39,14 +43,10 @@
             this.txt_key = new System.Windows.Forms.TextBox();
             this.pb_action = new System.Windows.Forms.ProgressBar();
             this.btn_action = new System.Windows.Forms.Button();
-            this.webBrowser2 = new System.Windows.Forms.WebBrowser();
-            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.label3 = new System.Windows.Forms.Label();
-            this.btn_next = new System.Windows.Forms.Button();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.lbl_msg = new System.Windows.Forms.Label();
-            this.lbl_page = new System.Windows.Forms.Label();
+            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.webBrowser2 = new System.Windows.Forms.WebBrowser();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -85,6 +85,45 @@
             this.splitContainer1.Size = new System.Drawing.Size(790, 638);
             this.splitContainer1.SplitterDistance = 83;
             this.splitContainer1.TabIndex = 1;
+            // 
+            // lbl_page
+            // 
+            this.lbl_page.AutoSize = true;
+            this.lbl_page.Font = new System.Drawing.Font("宋体", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lbl_page.ForeColor = System.Drawing.Color.Green;
+            this.lbl_page.Location = new System.Drawing.Point(728, 48);
+            this.lbl_page.Name = "lbl_page";
+            this.lbl_page.Size = new System.Drawing.Size(34, 21);
+            this.lbl_page.TabIndex = 14;
+            this.lbl_page.Text = "00";
+            // 
+            // lbl_msg
+            // 
+            this.lbl_msg.AutoSize = true;
+            this.lbl_msg.Location = new System.Drawing.Point(295, 51);
+            this.lbl_msg.Name = "lbl_msg";
+            this.lbl_msg.Size = new System.Drawing.Size(0, 12);
+            this.lbl_msg.TabIndex = 13;
+            // 
+            // btn_next
+            // 
+            this.btn_next.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_next.Location = new System.Drawing.Point(635, 46);
+            this.btn_next.Name = "btn_next";
+            this.btn_next.Size = new System.Drawing.Size(63, 23);
+            this.btn_next.TabIndex = 12;
+            this.btn_next.Text = "下一个";
+            this.btn_next.UseVisualStyleBackColor = true;
+            this.btn_next.Click += new System.EventHandler(this.btn_next_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(301, 51);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(119, 12);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "多个关键词使用,分割";
             // 
             // chk_num
             // 
@@ -165,49 +204,6 @@
             this.btn_action.UseVisualStyleBackColor = true;
             this.btn_action.Click += new System.EventHandler(this.btn_action_Click);
             // 
-            // webBrowser2
-            // 
-            this.webBrowser2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.webBrowser2.Location = new System.Drawing.Point(0, 0);
-            this.webBrowser2.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser2.Name = "webBrowser2";
-            this.webBrowser2.Size = new System.Drawing.Size(790, 271);
-            this.webBrowser2.TabIndex = 2;
-            // 
-            // webBrowser1
-            // 
-            this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.webBrowser1.Location = new System.Drawing.Point(0, 0);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(790, 276);
-            this.webBrowser1.TabIndex = 0;
-            // 
-            // timer1
-            // 
-            this.timer1.Interval = 2000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(301, 51);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(119, 12);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "多个关键词使用,分割";
-            // 
-            // btn_next
-            // 
-            this.btn_next.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_next.Location = new System.Drawing.Point(635, 46);
-            this.btn_next.Name = "btn_next";
-            this.btn_next.Size = new System.Drawing.Size(63, 23);
-            this.btn_next.TabIndex = 12;
-            this.btn_next.Text = "下一个";
-            this.btn_next.UseVisualStyleBackColor = true;
-            this.btn_next.Click += new System.EventHandler(this.btn_next_Click);
-            // 
             // splitContainer2
             // 
             this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -226,33 +222,37 @@
             this.splitContainer2.SplitterDistance = 276;
             this.splitContainer2.TabIndex = 3;
             // 
-            // lbl_msg
+            // webBrowser1
             // 
-            this.lbl_msg.AutoSize = true;
-            this.lbl_msg.Location = new System.Drawing.Point(295, 51);
-            this.lbl_msg.Name = "lbl_msg";
-            this.lbl_msg.Size = new System.Drawing.Size(0, 12);
-            this.lbl_msg.TabIndex = 13;
+            this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webBrowser1.Location = new System.Drawing.Point(0, 0);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.Size = new System.Drawing.Size(790, 276);
+            this.webBrowser1.TabIndex = 0;
             // 
-            // lbl_page
+            // webBrowser2
             // 
-            this.lbl_page.AutoSize = true;
-            this.lbl_page.Font = new System.Drawing.Font("宋体", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lbl_page.ForeColor = System.Drawing.Color.Green;
-            this.lbl_page.Location = new System.Drawing.Point(728, 48);
-            this.lbl_page.Name = "lbl_page";
-            this.lbl_page.Size = new System.Drawing.Size(34, 21);
-            this.lbl_page.TabIndex = 14;
-            this.lbl_page.Text = "00";
+            this.webBrowser2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webBrowser2.Location = new System.Drawing.Point(0, 0);
+            this.webBrowser2.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser2.Name = "webBrowser2";
+            this.webBrowser2.Size = new System.Drawing.Size(790, 271);
+            this.webBrowser2.TabIndex = 2;
             // 
-            // Form1
+            // timer1
+            // 
+            this.timer1.Interval = 5000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(790, 638);
             this.Controls.Add(this.splitContainer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form1";
+            this.Name = "FrmMain";
             this.Text = "搜索";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
